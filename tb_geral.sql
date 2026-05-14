@@ -33,13 +33,12 @@ CREATE TABLE CompraCL(
 	DataCompra DATETIME NOT NULL,
     VLVenda MONEY NOT NULL,
     QtCompra INT NOT NULL DEFAULT 01,
-    VLComprado AS ((VLVenda * QtCompra) AS MONEY)PERSISTED,
+    VLComprado AS (VLVenda * QtCompra)PERSISTED,
 CONSTRAINT fk_produto FOREIGN KEY (CodProduto)
  REFERENCES Produto(CodProduto) ON DELETE CASCADE,
 CONSTRAINT fk_Cliente FOREIGN KEY (CodCliente)
  REFERENCES Cliente(CodCliente) ON DELETE CASCADE,
-
-);
+ );
 
 
 
