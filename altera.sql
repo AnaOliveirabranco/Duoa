@@ -8,3 +8,6 @@ SET Lucro = 84.7;
 
 
 
+UPDATE CompraCL
+SET  CodCliente = 103, QtCompra = 3
+WHERE CodCompra = 1006;
